@@ -10,7 +10,12 @@
       "Bash(npx tailwindcss init -p)",
       "Bash(npm install ogl)",
       "Bash(git init)",
-      "Bash(git add .)"
+      "Bash(git add .)",
+      "Bash(git commit --amend -m \"Initial commit: Umidshots portfolio website\n\n- React + Vite setup with Tailwind CSS\n- Glass morphism navbar with dark/light mode\n- 3D profile card with Aceternity-style effects\n- LightRays animated background\n- Mobile responsive design (navbar at bottom)\n- Theme context with localStorage persistence\")",
+      "Bash(git add postcss.config.js)",
+      "Bash(git commit -m \"Update PostCSS config to use @tailwindcss/postcss plugin\")",
+      "Bash(git push --force origin main)",
+      "Bash(git log --pretty=fuller)"
     ],
     "deny": [],
     "ask": []
