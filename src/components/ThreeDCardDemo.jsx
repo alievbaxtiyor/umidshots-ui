@@ -17,7 +17,7 @@ export function ThreeDCardDemo() {
 
   return (
     <CardContainer className="inter-var">
-      <CardBody className="profile-card-glass relative group/card w-[350px] md:w-[600px] lg:w-[700px] h-auto">
+      <CardBody className="profile-card-glass relative group/card w-full max-w-[600px] h-auto">
         <div className="profile-card-content">
           <CardItem translateZ={50} className="profile-image-wrapper">
             <img
@@ -28,7 +28,7 @@ export function ThreeDCardDemo() {
           </CardItem>
           <div className="profile-text-content">
             <CardItem translateZ={60} className="w-full">
-              <h2 className="text-2xl font-bold text-neutral-800 dark:text-white mb-2">
+              <h2 className="text-xl md:text-2xl font-bold text-neutral-800 dark:text-white mb-2">
                 Umidshots | Aliyev Umid
               </h2>
               <p className="text-neutral-500 dark:text-neutral-300 text-sm mb-4">
@@ -36,11 +36,8 @@ export function ThreeDCardDemo() {
               </p>
             </CardItem>
             <CardItem translateZ={40} className="w-full mb-4">
-              <p className="text-neutral-600 dark:text-neutral-200 text-sm">
-                Mobilography, videography va editing orqali kuchli vizual kontent tayyorlayman.
-              </p>
-              <p className="text-neutral-500 dark:text-neutral-400 text-xs mt-2 font-medium">
-                Reels • Event • Promo • Editing
+              <p className="text-neutral-600 dark:text-neutral-200 text-sm leading-relaxed">
+                Passionate about creating beautiful and functional web experiences.
               </p>
             </CardItem>
             <CardItem translateZ={30} className="w-full">
