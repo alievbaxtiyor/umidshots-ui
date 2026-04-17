@@ -5,12 +5,12 @@ import heroImage from '../assets/images/hero-removebg-preview_cleanup.png';
 export function HeroSection() {
   return (
     <section className="hero-section-white">
-      <div className="hero-container-white">
-        {/* Logo (visible only on mobile) */}
-        <div className="hero-logo">
-          UMIDSHOTS
-        </div>
+      {/* Logo - Fixed at top */}
+      <div className="hero-logo">
+        UMIDSHOTS
+      </div>
 
+      <div className="hero-container-white">
         {/* Main Content with Large Text */}
         <div className="hero-main-content">
           {/* Large PORTFOLIO Text with Gradient */}

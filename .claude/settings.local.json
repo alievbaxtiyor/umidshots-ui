@@ -19,7 +19,8 @@
       "Bash(dir %USERPROFILE%.agentsskills)",
       "Bash(npm run dev)",
       "Bash(dir \"c:\\Users\\aliev\\Desktop\\work\\umidshots-ui\" /B)",
-      "Bash(git commit -m \"New changes\")"
+      "Bash(git commit -m \"New changes\")",
+      "Bash(git push)"
     ],
     "deny": [],
     "ask": []
