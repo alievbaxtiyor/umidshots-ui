@@ -61,6 +61,16 @@
   justify-content: center;
   width: 48px;
   height: 48px;
+  outline: none;
+}
+
+.nav-item:focus-visible {
+  outline: 2px solid rgba(0, 0, 0, 0.5);
+  outline-offset: 2px;
+}
+
+:root.dark .nav-item:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .nav-item svg {

@@ -1,41 +1,67 @@
-import { useState } from 'react';
 import { IoHome, IoPersonSharp, IoBriefcase, IoLink, IoSunny, IoMoon } from 'react-icons/io5';
 import { useTheme } from './context/ThemeContext';
 import './Navbar.css';
 
-const Navbar = () => {
-  const [activeItem, setActiveItem] = useState('home');
+const Navbar = ({ activeSection, onSectionChange }) => {
   const { isDark, toggleTheme } = useTheme();
 
+  const handleNavClick = (section) => {
+    onSectionChange(section);
+  };
+
   return (
-    <nav className="dynamic-island-nav">
+    <nav className="dynamic-island-nav" role="navigation" aria-label="Main navigation">
       <div className="nav-content">
-        <div className={`nav-item ${activeItem === 'home' ? 'active' : ''}`} onClick={() => setActiveItem('home')}>
+        <button
+          className={`nav-item ${activeSection === 'home' ? 'active' : ''}`}
+          onClick={() => handleNavClick('home')}
+          aria-label="Bosh sahifa"
+          aria-current={activeSection === 'home' ? 'page' : undefined}
+        >
           <IoHome size={24} />
-          <span className="nav-label">Home</span>
-        </div>
+          <span className="nav-label">Bosh sahifa</span>
+        </button>
 
-        <div className={`nav-item ${activeItem === 'about' ? 'active' : ''}`} onClick={() => setActiveItem('about')}>
+        <button
+          className={`nav-item ${activeSection === 'about' ? 'active' : ''}`}
+          onClick={() => handleNavClick('about')}
+          aria-label="Men haqimda"
+          aria-current={activeSection === 'about' ? 'page' : undefined}
+        >
           <IoPersonSharp size={24} />
-          <span className="nav-label">About me</span>
-        </div>
+          <span className="nav-label">Men haqimda</span>
+        </button>
 
-        <div className={`nav-item ${activeItem === 'portfolio' ? 'active' : ''}`} onClick={() => setActiveItem('portfolio')}>
+        <button
+          className={`nav-item ${activeSection === 'portfolio' ? 'active' : ''}`}
+          onClick={() => handleNavClick('portfolio')}
+          aria-label="Portfolio"
+          aria-current={activeSection === 'portfolio' ? 'page' : undefined}
+        >
           <IoBriefcase size={24} />
           <span className="nav-label">Portfolio</span>
-        </div>
+        </button>
 
-        <div className={`nav-item ${activeItem === 'links' ? 'active' : ''}`} onClick={() => setActiveItem('links')}>
+        <button
+          className={`nav-item ${activeSection === 'links' ? 'active' : ''}`}
+          onClick={() => handleNavClick('links')}
+          aria-label="Bog'lanish"
+          aria-current={activeSection === 'links' ? 'page' : undefined}
+        >
           <IoLink size={24} />
-          <span className="nav-label">Links</span>
-        </div>
+          <span className="nav-label">Bog'lanish</span>
+        </button>
 
         <div className="nav-separator"></div>
 
-        <div className="nav-item theme-toggle" onClick={toggleTheme}>
+        <button
+          className="nav-item theme-toggle"
+          onClick={toggleTheme}
+          aria-label={isDark ? 'Yorug\' rejimga o\'tish' : 'Qorong\'i rejimga o\'tish'}
+        >
           {isDark ? <IoSunny size={24} /> : <IoMoon size={24} />}
-          <span className="nav-label">{isDark ? 'Light mode' : 'Dark mode'}</span>
-        </div>
+          <span className="nav-label">{isDark ? 'Yorug\' rejim' : 'Qorong\'i rejim'}</span>
+        </button>
       </div>
     </nav>
   );

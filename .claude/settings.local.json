@@ -15,7 +15,11 @@
       "Bash(git add postcss.config.js)",
       "Bash(git commit -m \"Update PostCSS config to use @tailwindcss/postcss plugin\")",
       "Bash(git push --force origin main)",
-      "Bash(git log --pretty=fuller)"
+      "Bash(git log --pretty=fuller)",
+      "Bash(dir %USERPROFILE%.agentsskills)",
+      "Bash(npm run dev)",
+      "Bash(dir \"c:\\Users\\aliev\\Desktop\\work\\umidshots-ui\" /B)",
+      "Bash(git commit -m \"New changes\")"
     ],
     "deny": [],
     "ask": []
