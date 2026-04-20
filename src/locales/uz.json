@@ -1,0 +1,62 @@
+{
+  "about": {
+    "greeting": "Salom, men",
+    "name": "ALIYEV",
+    "surname": "UMID",
+    "description": "Video Montaj, Videografiya, Fotografiya va Grafik Dizayn sohasida ixtisoslashgan ijodkor. Uch yildan ortiq professional tajribam bilan, g'oyalarni puxta ijro va ijodiy aniqlik orqali ma'noli vizual hikoyalarga aylantiraman. Yangi kontseptsiyalarni o'rganishda, mahoratimni oshirishda va ta'sirli ishlarni yaratish uchun ijodiy chegaralarni kengaytirishda davom etaman.",
+    "stats": {
+      "experience": {
+        "number": "3+ yil",
+        "label": "Tajriba"
+      },
+      "videos": {
+        "number": "300+ Video",
+        "label": "Yaratilgan"
+      },
+      "brands": {
+        "number": "30+ Brend",
+        "label": "Hamkorlik"
+      }
+    },
+    "education": {
+      "title": "TA'LIM",
+      "items": [
+        {
+          "title": "MULTIMEDIA DIZAYN BO'YICHA DIPLOM",
+          "institution": "Etudemy Digital Academy",
+          "year": "2023"
+        },
+        {
+          "title": "RAQAMLI MARKETING BO'YICHA DIPLOM",
+          "institution": "Etudemy Digital Academy",
+          "year": "2023"
+        },
+        {
+          "title": "O'RTA MAXSUS TA'LIM",
+          "institution": "O'rta maxsus ta'lim kengashi",
+          "year": "2022"
+        }
+      ]
+    },
+    "experience": {
+      "title": "TAJRIBA",
+      "items": [
+        {
+          "title": "VIDEO MUHARRIR VA VIDEOGRAF",
+          "company": "Finquo Versity, Calicut",
+          "year": "2025"
+        },
+        {
+          "title": "VIDEO MUHARRIR",
+          "company": "Brand Packt, Ernakulam",
+          "year": "2024"
+        },
+        {
+          "title": "VIDEO MUHARRIR VA SMM",
+          "company": "Trend Factory, Perintalmanna",
+          "year": "2023"
+        }
+      ]
+    }
+  }
+}

@@ -248,10 +248,51 @@
    RESPONSIVE
    ========================================== */
 
+/* Laptop (1024px - 1440px) */
+@media (max-width: 1440px) and (min-width: 1025px) {
+  .hero-portfolio-text {
+    font-size: clamp(6rem, 18vw, 14rem);
+  }
+
+  .hero-profile-image {
+    width: clamp(320px, 45vw, 550px);
+    height: clamp(400px, 55vw, 700px);
+  }
+
+  .hero-logo {
+    font-size: 1.8rem;
+  }
+
+  .role-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .role-text h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Tablet */
 @media (max-width: 1024px) {
+  .hero-portfolio-text {
+    font-size: clamp(5rem, 16vw, 12rem);
+  }
+
   .hero-profile-image {
     width: clamp(240px, 35vw, 400px);
     height: clamp(300px, 45vw, 550px);
+  }
+
+  .hero-logo {
+    font-size: 1.6rem;
+  }
+
+  .role-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .role-text h3 {
+    font-size: 1.2rem;
   }
 }
 

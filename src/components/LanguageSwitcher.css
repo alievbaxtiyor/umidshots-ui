@@ -1,0 +1,143 @@
+/* Language Switcher - Floating Button */
+.language-switcher {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+}
+
+/* Toggle Button */
+.lang-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background-color: #E05D5D;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(224, 93, 93, 0.3);
+  transition: all 0.3s ease;
+}
+
+.lang-toggle-btn:hover {
+  background-color: #ff6b6b;
+  box-shadow: 0 6px 16px rgba(224, 93, 93, 0.4);
+  transform: translateY(-2px);
+}
+
+.lang-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.lang-code {
+  font-family: 'Teko', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Language Popup */
+.lang-popup {
+  position: absolute;
+  bottom: calc(100% + 1rem);
+  right: 0;
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 0.5rem;
+  min-width: 180px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Language Option Button */
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: transparent;
+  color: #cccccc;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.lang-option:hover {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+.lang-option.active {
+  background-color: #E05D5D;
+  color: #ffffff;
+}
+
+.lang-option.active:hover {
+  background-color: #ff6b6b;
+}
+
+.lang-flag {
+  font-size: 1.3rem;
+}
+
+.lang-label {
+  font-weight: 400;
+}
+
+/* Overlay */
+.lang-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: transparent;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .language-switcher {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .lang-toggle-btn {
+    padding: 0.65rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .lang-popup {
+    min-width: 160px;
+  }
+
+  .lang-option {
+    padding: 0.65rem 0.85rem;
+    font-size: 0.9rem;
+  }
+}

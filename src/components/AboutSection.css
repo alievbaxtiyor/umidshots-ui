@@ -243,13 +243,61 @@
 }
 
 /* Responsive */
+/* Laptop (1024px - 1440px) */
+@media (max-width: 1440px) and (min-width: 1025px) {
+  .about-container {
+    max-width: 1200px;
+  }
+
+  .about-name {
+    font-size: 3rem;
+  }
+
+  .about-description {
+    font-size: 0.95rem;
+  }
+
+  .about-image-wrapper .about-image {
+    width: 85%;
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+  }
+
+  .timeline-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* Tablet */
 @media (max-width: 1024px) {
+  .about-container {
+    max-width: 900px;
+  }
+
   .about-top {
     gap: 3rem;
   }
 
   .about-bottom {
     gap: 3rem;
+  }
+
+  .about-name {
+    font-size: 2.8rem;
+  }
+
+  .about-image-wrapper .about-image {
+    width: 85%;
+  }
+
+  .stat-number {
+    font-size: 1.7rem;
+  }
+
+  .timeline-title {
+    font-size: 1.1rem;
   }
 }
 

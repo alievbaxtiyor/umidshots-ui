@@ -1,0 +1,62 @@
+{
+  "about": {
+    "greeting": "Hi, iam",
+    "name": "ALIYEV",
+    "surname": "UMID",
+    "description": "Passionate creator specializing in Video Editing, Videography, Photography and Graphic Design. With over three years of professional experience, I turn ideas into meaningful visual stories through thoughtful execution and creative precision. I continue to explore new concepts, refine my craft, and push creative boundaries to deliver impactful work.",
+    "stats": {
+      "experience": {
+        "number": "3+ years",
+        "label": "Experience"
+      },
+      "videos": {
+        "number": "300+ Videos",
+        "label": "Completed"
+      },
+      "brands": {
+        "number": "30+ Brands",
+        "label": "Collaborated"
+      }
+    },
+    "education": {
+      "title": "EDUCATION",
+      "items": [
+        {
+          "title": "DIPLOMA IN MULTIMEDIA DESIGN",
+          "institution": "Etudemy Digital Academy",
+          "year": "2023"
+        },
+        {
+          "title": "DIPLOMA IN DIGITAL MARKETING",
+          "institution": "Etudemy Digital Academy",
+          "year": "2023"
+        },
+        {
+          "title": "HIGHER SECONDARY EDUCATION",
+          "institution": "HSE Board of Examination",
+          "year": "2022"
+        }
+      ]
+    },
+    "experience": {
+      "title": "EXPERIENCE",
+      "items": [
+        {
+          "title": "VIDEO EDITOR CUM VIDEOGRAPHER",
+          "company": "Finquo Versity, Calicut",
+          "year": "2025"
+        },
+        {
+          "title": "VIDEO EDITOR",
+          "company": "Brand Packt, Ernakulam",
+          "year": "2024"
+        },
+        {
+          "title": "VIDEO EDITOR & SMM",
+          "company": "Trend Factory, Perintalmanna",
+          "year": "2023"
+        }
+      ]
+    }
+  }
+}
