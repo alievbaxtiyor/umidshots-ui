@@ -1,41 +1,44 @@
 import React from 'react';
-import './DarkPortfolio.css';
+import { useLanguage } from '../context/LanguageContext';
+import './ExpertiseSection.css';
+
+// Import local icons
+import davinciIcon from '../assets/icons/davinchi.png';
+import afterEffectsIcon from '../assets/icons/after-effect.png';
+import premiereProIcon from '../assets/icons/premier-pro.png';
+import capCutIcon from '../assets/icons/cap-cut.png';
+import photoshopIcon from '../assets/icons/photoshop.png';
+import illustratorIcon from '../assets/icons/AdobeIllustrator.png';
+import lightroomIcon from '../assets/icons/lightroom.png';
+import figmaIcon from '../assets/icons/figma.png';
+
+// Software icons mapping
+const softwareIcons = {
+  'Davinci Resolve': davinciIcon,
+  'After Effects': afterEffectsIcon,
+  'Premiere Pro': premiereProIcon,
+  'Adobe Photoshop': photoshopIcon,
+  'Adobe Illustrator': illustratorIcon,
+  'Adobe Lightroom': lightroomIcon,
+  'Figma': figmaIcon,
+  'Capcut': capCutIcon
+};
 
 export function ExpertiseSection() {
-  const expertise = [
-    'Skilled in Video Editing',
-    'Professional Videography',
-    'Creative Graphic Designing',
-    'Product Shoots',
-    'Motion Graphics',
-    'Photography',
-    'Social Media Handling',
-    'Brand Focused Content Creation'
-  ];
-
-  const software = [
-    { name: 'DaVinci Resolve', level: 90, icon: '🎬' },
-    { name: 'After Effects', level: 85, icon: 'Ae' },
-    { name: 'Premiere Pro', level: 95, icon: 'Pr' },
-    { name: 'Adobe Photoshop', level: 80, icon: 'Ps' },
-    { name: 'Adobe Illustrator', level: 70, icon: 'Ai' },
-    { name: 'Lightroom', level: 75, icon: 'Lr' },
-    { name: 'Figma', level: 65, icon: 'F' },
-    { name: 'CapCut', level: 90, icon: '✂️' }
-  ];
+  const { t } = useLanguage();
 
   return (
     <section className="expertise-section">
-      <div className="section-container">
+      <div className="expertise-container">
         {/* Expertise */}
         <div className="expertise-block">
           <div className="section-title-with-arrow">
             <span className="arrow-icon">↗</span>
-            <h2>EXPERTISE</h2>
+            <h2>{t('expertise.title')}</h2>
           </div>
 
           <div className="expertise-grid">
-            {expertise.map((skill, index) => (
+            {t('expertise.skills').map((skill, index) => (
               <div key={index} className="expertise-item">
                 <span className="bullet">•</span>
                 <span>{skill}</span>
@@ -48,14 +51,25 @@ export function ExpertiseSection() {
         <div className="software-block">
           <div className="section-title-with-arrow">
             <span className="arrow-icon">↗</span>
-            <h2>SOFTWARE PROFICIENCY</h2>
+            <h2>{t('software.title')}</h2>
           </div>
 
           <div className="software-grid">
-            {software.map((tool, index) => (
+            {t('software.tools').map((tool, index) => (
               <div key={index} className="software-item">
                 <div className="software-header">
-                  <span className="software-icon">{tool.icon}</span>
+                  <div className="software-icon">
+                    {softwareIcons[tool.name] && typeof softwareIcons[tool.name] === 'string' && !softwareIcons[tool.name].startsWith('data:') ? (
+                      <img
+                        src={softwareIcons[tool.name]}
+                        alt={tool.name}
+                      />
+                    ) : softwareIcons[tool.name] ? (
+                      <span className="software-icon-text">{softwareIcons[tool.name]}</span>
+                    ) : (
+                      <span className="software-icon-text">⚡</span>
+                    )}
+                  </div>
                   <span className="software-name">{tool.name}</span>
                 </div>
                 <div className="progress-bar">

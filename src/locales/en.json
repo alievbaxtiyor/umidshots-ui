@@ -58,5 +58,31 @@
         }
       ]
     }
+  },
+  "expertise": {
+    "title": "EXPERTISE",
+    "skills": [
+      "Skilled in Video Editing",
+      "Professional Videography",
+      "Creative Graphic Designing",
+      "Product Shoots",
+      "Motion Graphics",
+      "Photography",
+      "Social Media Handling",
+      "Brand Focused - Content Creation"
+    ]
+  },
+  "software": {
+    "title": "SOFTWARE PROFICIENCY",
+    "tools": [
+      { "name": "Davinci Resolve", "level": 90 },
+      { "name": "After Effects", "level": 85 },
+      { "name": "Premiere Pro", "level": 95 },
+      { "name": "Adobe Photoshop", "level": 88 },
+      { "name": "Adobe Illustrator", "level": 75 },
+      { "name": "Adobe Lightroom", "level": 80 },
+      { "name": "Figma", "level": 92 },
+      { "name": "Capcut", "level": 95 }
+    ]
   }
 }

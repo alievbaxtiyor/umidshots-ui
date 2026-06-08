@@ -21,7 +21,8 @@
       "Bash(dir \"c:\\Users\\aliev\\Desktop\\work\\umidshots-ui\" /B)",
       "Bash(git commit -m \"New changes\")",
       "Bash(git push)",
-      "Read(//c/Users/aliev/Desktop/**)"
+      "Read(//c/Users/aliev/Desktop/**)",
+      "Bash(dir \"C:\\Users\\aliev\\Desktop\\work\\umidshots-ui\\src\\assets\\icons\" /B)"
     ],
     "deny": [],
     "ask": []
