@@ -31,7 +31,10 @@
       "Bash(awk '{print $9, $5}')",
       "Bash(git add public/*.mp4 public/*.MP4 public/*.MOV)",
       "Bash(git commit -m \"Add portfolio video files\")",
-      "Bash(npm run build)"
+      "Bash(npm run build)",
+      "Bash(npm install -D @tailwindcss/postcss)",
+      "Bash(git add postcss.config.js package.json package-lock.json src/components/PortfolioVideos.jsx)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nFix PostCSS config and video paths for Netlify deployment\n\n- Install @tailwindcss/postcss package\n- Update postcss.config.js to use @tailwindcss/postcss\n- Fix video 2 and 3 paths to use .mp4 extension\n- Build tested and working locally\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
     ],
     "deny": [],
     "ask": []
