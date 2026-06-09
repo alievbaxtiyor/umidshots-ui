@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import './ExpertiseSection.css';
 
 // Import local icons
@@ -26,18 +27,22 @@ const softwareIcons = {
 
 export function ExpertiseSection() {
   const { t } = useLanguage();
+  const titleRef = useScrollAnimation();
+  const gridRef = useScrollAnimation({ threshold: 0.2 });
+  const softwareTitleRef = useScrollAnimation();
+  const softwareGridRef = useScrollAnimation({ threshold: 0.2 });
 
   return (
     <section className="expertise-section">
       <div className="expertise-container">
         {/* Expertise */}
         <div className="expertise-block">
-          <div className="section-title-with-arrow">
+          <div ref={titleRef} className="section-title-with-arrow animate-fade-up">
             <span className="arrow-icon">↗</span>
             <h2>{t('expertise.title')}</h2>
           </div>
 
-          <div className="expertise-grid">
+          <div ref={gridRef} className="expertise-grid animate-fade-up">
             {t('expertise.skills').map((skill, index) => (
               <div key={index} className="expertise-item">
                 <span className="bullet">•</span>
@@ -49,12 +54,12 @@ export function ExpertiseSection() {
 
         {/* Software Proficiency */}
         <div className="software-block">
-          <div className="section-title-with-arrow">
+          <div ref={softwareTitleRef} className="section-title-with-arrow animate-fade-up">
             <span className="arrow-icon">↗</span>
             <h2>{t('software.title')}</h2>
           </div>
 
-          <div className="software-grid">
+          <div ref={softwareGridRef} className="software-grid animate-fade-up">
             {t('software.tools').map((tool, index) => (
               <div key={index} className="software-item">
                 <div className="software-header">

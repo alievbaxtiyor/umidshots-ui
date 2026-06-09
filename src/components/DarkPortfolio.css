@@ -7,7 +7,7 @@
   --dark-bg: #0a0a0a;
   --dark-secondary: #1a1a1a;
   --accent-coral: #E05D5D;
-  --accent-red: #ff4d4d;
+  --accent-red: #E05D5D;
   --text-white: #ffffff;
   --text-gray: #9ca3af;
   --text-light-gray: #6b7280;
@@ -60,7 +60,7 @@
   background: linear-gradient(180deg,
     rgba(255, 255, 255, 0.1) 0%,
     rgba(224, 93, 93, 0.3) 50%,
-    rgba(255, 77, 77, 0.5) 100%
+    rgba(224, 93, 93, 0.5) 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

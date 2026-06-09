@@ -22,7 +22,10 @@
       "Bash(git commit -m \"New changes\")",
       "Bash(git push)",
       "Read(//c/Users/aliev/Desktop/**)",
-      "Bash(dir \"C:\\Users\\aliev\\Desktop\\work\\umidshots-ui\\src\\assets\\icons\" /B)"
+      "Bash(dir \"C:\\Users\\aliev\\Desktop\\work\\umidshots-ui\\src\\assets\\icons\" /B)",
+      "Bash(dir \"c:\\Users\\aliev\\Desktop\\work\\umidshots-ui\\public\" /B)",
+      "Bash(findstr /i \"portfolio-video-4\")",
+      "Bash(git commit -m \"$(cat <<''EOF''\nUpdate contact form, colors, and branding\n\n- Replace email field with phone number in contact form\n- Update all sections to use consistent #E05D5D brand color\n- Update progress bars and accents to #E05D5D\n- Change page title to \"Umidshots - Video Editor Portfolio\"\n- Add custom favicon with video play icon\n- Update translations for phone field (uz, en, ru)\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
     ],
     "deny": [],
     "ask": []

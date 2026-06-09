@@ -1,7 +1,6 @@
 .expertise-section {
-  padding: 80px 40px;
+  padding: 60px 40px 0px 40px;
   background-color: #000000;
-  min-height: 100vh;
 }
 
 .expertise-container {
@@ -22,7 +21,7 @@
 }
 
 .arrow-icon {
-  color: #ef4444;
+  color: #E05D5D;
   font-size: 48px;
   font-weight: bold;
   line-height: 1;
@@ -31,10 +30,10 @@
 .section-title-with-arrow h2 {
   color: #ffffff;
   font-size: 48px;
-  font-weight: bold;
-  letter-spacing: 4px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
   margin: 0;
-  font-family: 'Eurostile', 'Arial', sans-serif;
+  font-family: 'Teko', sans-serif;
 }
 
 .expertise-grid {
@@ -51,7 +50,7 @@
 }
 
 .expertise-item .bullet {
-  color: #ef4444;
+  color: #E05D5D;
   font-size: 32px;
   line-height: 1;
   margin-top: -5px;
@@ -67,6 +66,7 @@
 /* Software Proficiency Block */
 .software-block {
   margin-top: 100px;
+  margin-bottom: 0;
 }
 
 .software-grid {
@@ -123,10 +123,10 @@
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(to right, #ef4444 0%, #dc2626 100%);
+  background: linear-gradient(to right, #E05D5D 0%, #C74A4A 100%);
   border-radius: 10px;
   transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+  box-shadow: 0 0 10px rgba(224, 93, 93, 0.5);
 }
 
 /* Responsive Design */

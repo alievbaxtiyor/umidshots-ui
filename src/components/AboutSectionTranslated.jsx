@@ -2,9 +2,15 @@ import React from 'react';
 import './AboutSection.css';
 import aboutImage from '../assets/images/hero-removebg-preview_cleanup.png';
 import { useLanguage } from '../context/LanguageContext';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 export function AboutSection() {
   const { t } = useLanguage();
+  const imageRef = useScrollAnimation();
+  const introRef = useScrollAnimation({ threshold: 0.2 });
+  const statsRef = useScrollAnimation({ threshold: 0.3 });
+  const educationRef = useScrollAnimation({ threshold: 0.2 });
+  const experienceRef = useScrollAnimation({ threshold: 0.2 });
 
   return (
     <section className="about-section">
@@ -12,7 +18,7 @@ export function AboutSection() {
         {/* Top Section - Profile and Intro */}
         <div className="about-top">
           {/* Profile Image */}
-          <div className="about-image-wrapper">
+          <div ref={imageRef} className="about-image-wrapper animate-fade-left">
             <img
               src={aboutImage}
               alt="Umidshots - Video Editor"
@@ -21,7 +27,7 @@ export function AboutSection() {
           </div>
 
           {/* Intro Text */}
-          <div className="about-intro">
+          <div ref={introRef} className="about-intro animate-fade-right">
             <h1 className="about-name">
               <span className="about-greeting">{t('about.greeting')}</span>{' '}
               <span className="name-with-line">{t('about.name')}</span><br />
@@ -33,7 +39,7 @@ export function AboutSection() {
             </p>
 
             {/* Stats */}
-            <div className="about-stats">
+            <div ref={statsRef} className="about-stats animate-fade-up">
               <div className="stat-item">
                 <h3 className="stat-number">{t('about.stats.experience.number')}</h3>
                 <p className="stat-label">{t('about.stats.experience.label')}</p>
@@ -53,7 +59,7 @@ export function AboutSection() {
         {/* Bottom Section - Education & Experience */}
         <div className="about-bottom">
           {/* Education */}
-          <div className="about-column">
+          <div ref={educationRef} className="about-column animate-fade-left">
             <h2>{t('about.education.title')}</h2>
 
             {t('about.education.items').map((item, index) => (
@@ -68,7 +74,7 @@ export function AboutSection() {
           </div>
 
           {/* Experience */}
-          <div className="about-column">
+          <div ref={experienceRef} className="about-column animate-fade-right">
             <h2>{t('about.experience.title')}</h2>
 
             {t('about.experience.items').map((item, index) => (

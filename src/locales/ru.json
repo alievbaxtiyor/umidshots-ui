@@ -84,5 +84,80 @@
       { "name": "Figma", "level": 92 },
       { "name": "Capcut", "level": 95 }
     ]
+  },
+  "contents": {
+    "title": "СОДЕРЖАНИЕ",
+    "items": {
+      "presentationVideos": "ПРЕЗЕНТАЦИОННЫЕ ВИДЕО",
+      "motionGraphics": "МОУШН ГРАФИКА",
+      "wideScreenVideos": "ШИРОКОЭКРАННЫЕ ВИДЕО",
+      "socialMediaReels": "РОЛИКИ ДЛЯ СОЦ. СЕТЕЙ"
+    }
+  },
+  "portfolio": {
+    "title": "ПОРТФОЛИО",
+    "videos": {
+      "video1": {
+        "title": "Видео для продаж",
+        "description": "Образец видео процесса продаж и роста оборудования компании Tederic.",
+        "client": "Tederic",
+        "category": "Продажи",
+        "duration": "2:30",
+        "year": "2026"
+      },
+      "video2": {
+        "title": "Таргетное видео",
+        "description": "Образец видео созданного для целевых продаж компании Rossen.",
+        "client": "Rossen",
+        "category": "Таргет",
+        "duration": "1:45",
+        "year": "2026"
+      },
+      "video3": {
+        "title": "Видео для продаж",
+        "description": "Образец видео созданного для представления и продажи оборудования компании Karvon Trade.",
+        "client": "Karvon Trade",
+        "category": "Таргет",
+        "duration": "0:60",
+        "year": "2026"
+      },
+      "video4": {
+        "title": "Instagram Story",
+        "description": "Образец видео объявления скидок на продукты магазина сувениров и оборудования Art Gallery.",
+        "client": "Art Gallery in Tashkent",
+        "category": "Таргет",
+        "duration": "0:15",
+        "year": "2026"
+      },
+      "video5": {
+        "title": "Instagram Post",
+        "description": "Видео созданное для Instagram поста ресторана Bey Efendi.",
+        "client": "Bey Efendi in Andijan",
+        "category": "Пост",
+        "duration": "0:30",
+        "year": "2025"
+      }
+    }
+  },
+  "contact": {
+    "title": "КОНТАКТЫ",
+    "phoneLabel": "Телефон",
+    "phone": "+998 90 123 45 67",
+    "emailLabel": "Email",
+    "email": "umidshots@gmail.com",
+    "instagramHandle": "umidshots",
+    "instagram": "https://instagram.com/umidshots",
+    "telegramHandle": "umidshots",
+    "telegram": "https://t.me/umidshots",
+    "youtubeHandle": "umidshots",
+    "youtube": "https://youtube.com/@umidshots",
+    "formTitle": "Отправить сообщение",
+    "namePlaceholder": "Ваше имя",
+    "phonePlaceholder": "Ваш номер телефона",
+    "messagePlaceholder": "Ваше сообщение",
+    "submitButton": "Отправить",
+    "sendingMessage": "Отправка...",
+    "successMessage": "Сообщение успешно отправлено!",
+    "errorMessage": "Произошла ошибка. Пожалуйста, попробуйте снова."
   }
 }

@@ -84,5 +84,80 @@
       { "name": "Figma", "level": 92 },
       { "name": "Capcut", "level": 95 }
     ]
+  },
+  "contents": {
+    "title": "TARKIB",
+    "items": {
+      "presentationVideos": "TAQDIMOT VIDEOLARI",
+      "motionGraphics": "MOTION GRAPHICS",
+      "wideScreenVideos": "KENG EKRAN VIDEOLARI",
+      "socialMediaReels": "IJTIMOIY TARMOQ REELS"
+    }
+  },
+  "portfolio": {
+    "title": "PORTFOLIO",
+    "videos": {
+      "video1": {
+        "title": "Sotuv uchun video",
+        "description": "Tederic korxonasining uskunalarini sotuvi va ortish jarayoni videosidan namuna.",
+        "client": "Tederic",
+        "category": "Sotuv",
+        "duration": "2:30",
+        "year": "2026"
+      },
+      "video2": {
+        "title": "Target video",
+        "description": "Rossen kompaniyasi target sotuvi uchun qilingan videodan namuna.",
+        "client": "Rossen",
+        "category": "Target",
+        "duration": "1:45",
+        "year": "2026"
+      },
+      "video3": {
+        "title": "Sotuv uchun video",
+        "description": "Karvon trade kompaniyasi uskunasini tanishtiruv va sotuv uchun qilingan videodan namuna.",
+        "client": "Karvon Trade",
+        "category": "Target",
+        "duration": "0:60",
+        "year": "2026"
+      },
+      "video4": {
+        "title": "Instagram story",
+        "description": "Art gallery suviner va jihozlar do'koni mahsulotlarini chegirmasini e'lon qilinga videodan na'muna.",
+        "client": "Art Gallery in Tashkent",
+        "category": "Target",
+        "duration": "0:15",
+        "year": "2026"
+      },
+      "video5": {
+        "title": "Instagram post",
+        "description": "Bey Efendi restauranti instagram posti uchun qilingan video.",
+        "client": "Bey Efendi in Andijan",
+        "category": "Post",
+        "duration": "0:30",
+        "year": "2025"
+      }
+    }
+  },
+  "contact": {
+    "title": "ALOQA",
+    "phoneLabel": "Telefon",
+    "phone": "+998 90 123 45 67",
+    "emailLabel": "Email",
+    "email": "umidshots@gmail.com",
+    "instagramHandle": "umidshots",
+    "instagram": "https://instagram.com/umidshots",
+    "telegramHandle": "umidshots",
+    "telegram": "https://t.me/umidshots",
+    "youtubeHandle": "umidshots",
+    "youtube": "https://youtube.com/@umidshots",
+    "formTitle": "Xabar yuborish",
+    "namePlaceholder": "Ismingiz",
+    "phonePlaceholder": "Telefon raqamingiz",
+    "messagePlaceholder": "Xabaringiz",
+    "submitButton": "Yuborish",
+    "sendingMessage": "Yuborilmoqda...",
+    "successMessage": "Xabaringiz muvaffaqiyatli yuborildi!",
+    "errorMessage": "Xatolik yuz berdi. Iltimos, qayta urinib ko'ring."
   }
 }
