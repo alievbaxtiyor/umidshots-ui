@@ -38,8 +38,8 @@ export function PortfolioVideos() {
       id: 2,
       title: t('portfolio.videos.video2.title'),
       description: t('portfolio.videos.video2.description'),
-      videoUrl: '/portfolio-video-2.MOV',
-      thumbnail: '/portfolio-video-2.MOV',
+      videoUrl: '/portfolio-video-2.mp4',
+      thumbnail: '/portfolio-video-2.mp4',
       clientLogo: '/src/assets/logos/video2-client.PNG',
       details: {
         client: t('portfolio.videos.video2.client'),
@@ -52,8 +52,8 @@ export function PortfolioVideos() {
       id: 3,
       title: t('portfolio.videos.video3.title'),
       description: t('portfolio.videos.video3.description'),
-      videoUrl: '/portfolio-video-3.MOV',
-      thumbnail: '/portfolio-video-3.MOV',
+      videoUrl: '/portfolio-video-3.mp4',
+      thumbnail: '/portfolio-video-3.mp4',
       clientLogo: '/src/assets/logos/video3-client.PNG',
       details: {
         client: t('portfolio.videos.video3.client'),
