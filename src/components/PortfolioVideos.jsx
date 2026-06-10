@@ -24,8 +24,9 @@ export function PortfolioVideos() {
       id: 1,
       title: t('portfolio.videos.video1.title'),
       description: t('portfolio.videos.video1.description'),
-      videoUrl: '/portfolio-video-1.MP4',
-      thumbnail: '/portfolio-video-1.MP4',
+      videoUrl: 'https://www.youtube.com/embed/JxsLXidL8KQ',
+      thumbnail: 'https://img.youtube.com/vi/JxsLXidL8KQ/maxresdefault.jpg',
+      isYouTube: true,
       clientLogo: '/video1-client.PNG',
       details: {
         client: t('portfolio.videos.video1.client'),
@@ -276,27 +277,39 @@ export function PortfolioVideos() {
             {videos.map((video, index) => (
               <div key={video.id} className="desktop-carousel-slide">
                 <div className="video-thumbnail">
-                  <video
-                    ref={(el) => (videoRefs.current[index] = el)}
-                    src={video.thumbnail}
-                    muted={isMuted}
-                    playsInline
-                    loop
-                  />
-                  <button className="mute-button" onClick={toggleMute} title={isMuted ? 'Unmute' : 'Mute'}>
-                    {isMuted ? (
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-                        <line x1="23" y1="9" x2="17" y2="15"></line>
-                        <line x1="17" y1="9" x2="23" y2="15"></line>
-                      </svg>
-                    ) : (
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-                      </svg>
-                    )}
-                  </button>
+                  {video.isYouTube ? (
+                    <iframe
+                      src={`${video.videoUrl}?autoplay=${index === currentIndex ? 1 : 0}&mute=${isMuted ? 1 : 0}&loop=1&playlist=${video.videoUrl.split('/').pop()}`}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    ></iframe>
+                  ) : (
+                    <video
+                      ref={(el) => (videoRefs.current[index] = el)}
+                      src={video.thumbnail}
+                      muted={isMuted}
+                      playsInline
+                      loop
+                    />
+                  )}
+                  {!video.isYouTube && (
+                    <button className="mute-button" onClick={toggleMute} title={isMuted ? 'Unmute' : 'Mute'}>
+                      {isMuted ? (
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                          <line x1="23" y1="9" x2="17" y2="15"></line>
+                          <line x1="17" y1="9" x2="23" y2="15"></line>
+                        </svg>
+                      ) : (
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                          <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                        </svg>
+                      )}
+                    </button>
+                  )}
                 </div>
               </div>
             ))}
@@ -384,27 +397,39 @@ export function PortfolioVideos() {
             {videos.map((video, index) => (
               <div key={video.id} className="carousel-slide">
                 <div className="video-thumbnail">
-                  <video
-                    ref={(el) => (videoRefs.current[index + videos.length] = el)}
-                    src={video.thumbnail}
-                    muted={isMuted}
-                    playsInline
-                    loop
-                  />
-                  <button className="mute-button" onClick={toggleMute} title={isMuted ? 'Unmute' : 'Mute'}>
-                    {isMuted ? (
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-                        <line x1="23" y1="9" x2="17" y2="15"></line>
-                        <line x1="17" y1="9" x2="23" y2="15"></line>
-                      </svg>
-                    ) : (
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-                      </svg>
-                    )}
-                  </button>
+                  {video.isYouTube ? (
+                    <iframe
+                      src={`${video.videoUrl}?autoplay=${index === currentIndex ? 1 : 0}&mute=${isMuted ? 1 : 0}&loop=1&playlist=${video.videoUrl.split('/').pop()}`}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    ></iframe>
+                  ) : (
+                    <video
+                      ref={(el) => (videoRefs.current[index + videos.length] = el)}
+                      src={video.thumbnail}
+                      muted={isMuted}
+                      playsInline
+                      loop
+                    />
+                  )}
+                  {!video.isYouTube && (
+                    <button className="mute-button" onClick={toggleMute} title={isMuted ? 'Unmute' : 'Mute'}>
+                      {isMuted ? (
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                          <line x1="23" y1="9" x2="17" y2="15"></line>
+                          <line x1="17" y1="9" x2="23" y2="15"></line>
+                        </svg>
+                      ) : (
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                          <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                        </svg>
+                      )}
+                    </button>
+                  )}
                 </div>
               </div>
             ))}
@@ -468,12 +493,22 @@ export function PortfolioVideos() {
           <div className="video-modal" onClick={closeVideo}>
             <div className="video-modal-content" onClick={(e) => e.stopPropagation()}>
               <button className="close-button" onClick={closeVideo}>×</button>
-              <video
-                src={selectedVideo.videoUrl}
-                controls
-                autoPlay
-                className="modal-video"
-              />
+              {selectedVideo.isYouTube ? (
+                <iframe
+                  src={`${selectedVideo.videoUrl}?autoplay=1`}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="modal-video"
+                ></iframe>
+              ) : (
+                <video
+                  src={selectedVideo.videoUrl}
+                  controls
+                  autoPlay
+                  className="modal-video"
+                />
+              )}
               <div className="modal-info">
                 <h3>{selectedVideo.title}</h3>
                 <p>{selectedVideo.description}</p>
