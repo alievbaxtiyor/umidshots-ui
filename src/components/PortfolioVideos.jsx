@@ -26,7 +26,7 @@ export function PortfolioVideos() {
       description: t('portfolio.videos.video1.description'),
       videoUrl: '/portfolio-video-1.MP4',
       thumbnail: '/portfolio-video-1.MP4',
-      clientLogo: '/src/assets/logos/video1-client.PNG',
+      clientLogo: '/video1-client.PNG',
       details: {
         client: t('portfolio.videos.video1.client'),
         category: t('portfolio.videos.video1.category'),
@@ -40,7 +40,7 @@ export function PortfolioVideos() {
       description: t('portfolio.videos.video2.description'),
       videoUrl: '/portfolio-video-2.mp4',
       thumbnail: '/portfolio-video-2.mp4',
-      clientLogo: '/src/assets/logos/video2-client.PNG',
+      clientLogo: '/video2-client.PNG',
       details: {
         client: t('portfolio.videos.video2.client'),
         category: t('portfolio.videos.video2.category'),
@@ -54,7 +54,7 @@ export function PortfolioVideos() {
       description: t('portfolio.videos.video3.description'),
       videoUrl: '/portfolio-video-3.mp4',
       thumbnail: '/portfolio-video-3.mp4',
-      clientLogo: '/src/assets/logos/video3-client.PNG',
+      clientLogo: '/video3-client.PNG',
       details: {
         client: t('portfolio.videos.video3.client'),
         category: t('portfolio.videos.video3.category'),
