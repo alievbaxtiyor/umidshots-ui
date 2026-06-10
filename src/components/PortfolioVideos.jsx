@@ -279,10 +279,11 @@ export function PortfolioVideos() {
                 <div className="video-thumbnail">
                   {video.isYouTube ? (
                     <iframe
-                      src={`${video.videoUrl}?autoplay=${index === currentIndex ? 1 : 0}&mute=${isMuted ? 1 : 0}&loop=1&playlist=${video.videoUrl.split('/').pop()}`}
+                      src={`${video.videoUrl}?autoplay=1&mute=1&loop=1&controls=0&playlist=${video.videoUrl.split('/').pop()}`}
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
+                      title={video.title}
                     ></iframe>
                   ) : (
                     <video
@@ -398,10 +399,11 @@ export function PortfolioVideos() {
                 <div className="video-thumbnail">
                   {video.isYouTube ? (
                     <iframe
-                      src={`${video.videoUrl}?autoplay=${index === currentIndex ? 1 : 0}&mute=${isMuted ? 1 : 0}&loop=1&playlist=${video.videoUrl.split('/').pop()}`}
+                      src={`${video.videoUrl}?autoplay=1&mute=1&loop=1&controls=0&playlist=${video.videoUrl.split('/').pop()}`}
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
+                      title={video.title}
                     ></iframe>
                   ) : (
                     <video
