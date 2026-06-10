@@ -124,12 +124,14 @@
   justify-content: center;
 }
 
-.video-thumbnail video {
+.video-thumbnail video,
+.video-thumbnail iframe {
   width: 100%;
   height: 100%;
   max-height: 70vh;
   display: block;
   object-fit: cover;
+  border: none;
 }
 
 /* Mute Button - Instagram style */
@@ -546,8 +548,16 @@
 .modal-video {
   width: 100%;
   height: auto;
+  min-height: 400px;
   display: block;
   background: #000000;
+  border: none;
+}
+
+.modal-video iframe {
+  width: 100%;
+  min-height: 400px;
+  aspect-ratio: 16/9;
 }
 
 .modal-info {
