@@ -24,9 +24,8 @@ export function PortfolioVideos() {
       id: 1,
       title: t('portfolio.videos.video1.title'),
       description: t('portfolio.videos.video1.description'),
-      videoUrl: 'https://www.youtube.com/embed/geQijo-B1nY',
-      thumbnail: 'https://img.youtube.com/vi/geQijo-B1nY/maxresdefault.jpg',
-      isYouTube: true,
+      videoUrl: '/portfolio-video-1.MP4',
+      thumbnail: '/portfolio-video-1.MP4',
       clientLogo: '/video1-client.PNG',
       details: {
         client: t('portfolio.videos.video1.client'),
