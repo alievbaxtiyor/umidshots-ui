@@ -160,9 +160,18 @@ export function PortfolioVideos() {
   // Control video playback based on current index
   useEffect(() => {
     videoRefs.current.forEach((video, index) => {
-      if (video) {
+      if (video && !video.dataset?.isYouTube) {
         if (index === currentIndex) {
-          video.play().catch(err => console.log('Play error:', err));
+          // Force muted for mobile autoplay
+          video.muted = true;
+          const playPromise = video.play();
+          if (playPromise !== undefined) {
+            playPromise.catch(err => {
+              console.log('Play error:', err);
+              // Retry with explicit user interaction
+              video.load();
+            });
+          }
         } else {
           video.pause();
           video.currentTime = 0;
@@ -291,6 +300,9 @@ export function PortfolioVideos() {
                       muted={isMuted}
                       playsInline
                       loop
+                      autoPlay
+                      preload="metadata"
+                      webkit-playsinline="true"
                     />
                   )}
                   {!video.isYouTube && (
