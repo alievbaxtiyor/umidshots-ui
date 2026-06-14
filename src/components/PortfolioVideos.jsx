@@ -162,14 +162,18 @@ export function PortfolioVideos() {
     videoRefs.current.forEach((video, index) => {
       if (video && !video.dataset?.isYouTube) {
         if (index === currentIndex) {
-          // Force muted for mobile autoplay
+          // Force muted and reload for mobile autoplay
           video.muted = true;
+          video.load();
           const playPromise = video.play();
           if (playPromise !== undefined) {
             playPromise.catch(err => {
               console.log('Play error:', err);
-              // Retry with explicit user interaction
-              video.load();
+              // Mobile Safari may need user interaction - try again after brief delay
+              setTimeout(() => {
+                video.muted = true;
+                video.play().catch(e => console.log('Retry failed:', e));
+              }, 100);
             });
           }
         } else {
@@ -297,11 +301,13 @@ export function PortfolioVideos() {
                     <video
                       ref={(el) => (videoRefs.current[index] = el)}
                       src={video.thumbnail}
-                      muted={isMuted}
+                      muted
                       playsInline
                       loop
                       autoPlay
-                      preload="metadata"
+                      preload="auto"
+                      controls={false}
+                      disablePictureInPicture
                     />
                   )}
                   {!video.isYouTube && (
@@ -419,11 +425,13 @@ export function PortfolioVideos() {
                     <video
                       ref={(el) => (videoRefs.current[index + videos.length] = el)}
                       src={video.thumbnail}
-                      muted={isMuted}
+                      muted
                       playsInline
                       loop
                       autoPlay
-                      preload="metadata"
+                      preload="auto"
+                      controls={false}
+                      disablePictureInPicture
                     />
                   )}
                   {!video.isYouTube && (
