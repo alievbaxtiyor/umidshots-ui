@@ -302,7 +302,6 @@ export function PortfolioVideos() {
                       loop
                       autoPlay
                       preload="metadata"
-                      webkit-playsinline="true"
                     />
                   )}
                   {!video.isYouTube && (
@@ -423,6 +422,8 @@ export function PortfolioVideos() {
                       muted={isMuted}
                       playsInline
                       loop
+                      autoPlay
+                      preload="metadata"
                     />
                   )}
                   {!video.isYouTube && (
